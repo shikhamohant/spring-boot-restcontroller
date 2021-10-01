@@ -39,6 +39,14 @@ Confirm Response:
 Initiate the Attack Vector: 
 ![image](https://user-images.githubusercontent.com/50335583/135629375-f710d0e2-192b-4562-bf06-133f572acbf3.png)
 
+Sample Response 1: 
+![image](https://user-images.githubusercontent.com/50335583/135629683-95a6be11-994e-4809-88f7-42c9108161b7.png)
+
+Sample Response 2:
+![image](https://user-images.githubusercontent.com/50335583/135629736-c947f4bc-02d9-473f-8b50-ffaddced8478.png)
+
+Confirmation of Runtime Exceptions Activated:
+![image](https://user-images.githubusercontent.com/50335583/135630545-92508669-6215-4988-9fe6-be14ff9f32ed.png)
 
 
 
