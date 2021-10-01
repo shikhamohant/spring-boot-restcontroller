@@ -1,4 +1,4 @@
-# Spring Boot @RestController Example
+# Spring Boot @RestController Example with Chaos Monkey Enabled in Spring Application Properties
 
 ## Description
 
