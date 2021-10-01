@@ -15,3 +15,5 @@ Actually, much better if you just start the application and navigate to `http://
 ![Swagger Documentation](images/swagger.png)
 
 ![image](https://user-images.githubusercontent.com/50335583/135618904-26996ad8-1824-4d03-a97c-4e878b8ef2a2.png)
+![image](https://user-images.githubusercontent.com/50335583/135619103-a6322eba-2fb0-4df9-847c-68daf95f5a6b.png)
+
