@@ -36,6 +36,9 @@ Change the Assaults Configuration to invoke Methods within the Application:
 Confirm Response: 
 ![image](https://user-images.githubusercontent.com/50335583/135629142-e8ab20d0-9bef-472b-8034-e36b68fcd6c8.png)
 
+Initiate the Attack Vector: 
+![image](https://user-images.githubusercontent.com/50335583/135629375-f710d0e2-192b-4562-bf06-133f572acbf3.png)
+
 
 
 
