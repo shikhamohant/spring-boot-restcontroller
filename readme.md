@@ -29,6 +29,15 @@ In addition to the end points and controller, chaos testing can be done as shown
 ![image](https://user-images.githubusercontent.com/50335583/135620247-d62f0021-a1e1-4464-9e62-0d58e705d623.png)
 
 
+Change the Assaults Configuration to invoke Methods within the Application: 
+
+![image](https://user-images.githubusercontent.com/50335583/135629011-17cb2033-8cfc-4fc0-9b3a-7c020db5e0f4.png)
+
+Confirm Response: 
+![image](https://user-images.githubusercontent.com/50335583/135629142-e8ab20d0-9bef-472b-8034-e36b68fcd6c8.png)
+
+
+
 
 
 
