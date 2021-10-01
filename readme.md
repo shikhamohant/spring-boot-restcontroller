@@ -52,5 +52,25 @@ Confirmation of Runtime Exceptions Activated:
 Logs Confirming Chaos Monkey Bringing Down Application:
 ![image](https://user-images.githubusercontent.com/50335583/135631448-3ccbe198-b7d4-4ffb-83ec-e0aefd33f4da.png)
 
+Before changing the attack vector assaults configuration is default as shown :
+![image](https://user-images.githubusercontent.com/50335583/135633450-fa485cce-586e-4a80-9554-c76bc9897583.png)
+
+Logs:
+![image](https://user-images.githubusercontent.com/50335583/135633540-5ea3b75e-acef-4b51-849a-6b56f30ee7df.png)
+
+After changing attack vector:
+![image](https://user-images.githubusercontent.com/50335583/135633736-4cc03e52-1032-4044-8882-e37bb0b3d44e.png)
+
+Initating Attack:
+![image](https://user-images.githubusercontent.com/50335583/135633837-b22252fb-1b2a-4658-8746-ac54c08d9dfa.png)
+
+Confirmation of Shutdown via Logs :
+![image](https://user-images.githubusercontent.com/50335583/135633977-b5e56f46-672c-4f59-8a53-0ac0c1f1d07e.png)
+
+
+
+
+
+
 
 
