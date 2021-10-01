@@ -13,3 +13,5 @@ You can use the endpoints behind `http://localhost:8080/spanish-greetings`. If y
 Actually, much better if you just start the application and navigate to `http://localhost:8080/swagger-ui.html`. There you'll find a nice API documentation thanks to Swagger. Moreover, *you can play with it*.
 
 ![Swagger Documentation](images/swagger.png)
+
+![image](https://user-images.githubusercontent.com/50335583/135618904-26996ad8-1824-4d03-a97c-4e878b8ef2a2.png)
