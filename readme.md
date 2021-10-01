@@ -14,6 +14,11 @@ Actually, much better if you just start the application and navigate to `http://
 
 ![Swagger Documentation](images/swagger.png)
 
+Upon Succesful Initialization of Chaos Monkey you should see something like this : 
+
+![image](https://user-images.githubusercontent.com/50335583/135620733-ee4eb8bc-918d-461a-8cca-40f085976f90.png)
+
+
 In addition to the end points and controller, chaos testing can be done as shown using postman for the endpoints exposed under actuator:
 
 ![image](https://user-images.githubusercontent.com/50335583/135618904-26996ad8-1824-4d03-a97c-4e878b8ef2a2.png)
