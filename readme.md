@@ -49,6 +49,8 @@ Confirmation of Runtime Exceptions Activated:
 ![image](https://user-images.githubusercontent.com/50335583/135630545-92508669-6215-4988-9fe6-be14ff9f32ed.png)
 
 
+Logs Confirming Chaos Monkey Bringing Down Application:
+![image](https://user-images.githubusercontent.com/50335583/135631448-3ccbe198-b7d4-4ffb-83ec-e0aefd33f4da.png)
 
 
 
