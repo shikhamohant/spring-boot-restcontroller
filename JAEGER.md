@@ -38,3 +38,7 @@ After a Latency Attack:
 Delayed Succesful Response after latency attack :
 ![image](https://user-images.githubusercontent.com/50335583/135888174-af300392-121f-43e8-a089-28b1967c5d2b.png)
 
+Jaeger Trace Graph :
+![image](https://user-images.githubusercontent.com/50335583/135891756-bf0272f3-0c50-47ed-badc-25b976702f80.png)
+
+
