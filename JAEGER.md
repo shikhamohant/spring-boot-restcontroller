@@ -31,3 +31,8 @@ Basic Controller Error After Incoorect resource path was provided:
 ![image](https://user-images.githubusercontent.com/50335583/135886602-5e3f73ad-2fde-4b3d-a84d-ac6c51382a48.png)
 
 ![image](https://user-images.githubusercontent.com/50335583/135886433-29aa2233-77c3-4640-a557-1a4a1fb97d06.png)
+
+After a Latency Attack:
+![image](https://user-images.githubusercontent.com/50335583/135887780-d3fa5c48-c511-4aad-af5d-c97742dcb9dc.png)
+
+
