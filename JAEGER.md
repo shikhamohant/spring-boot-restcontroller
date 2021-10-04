@@ -17,3 +17,6 @@ Jaeger Traces as seen in Logs :
 Start or Create a Chaos RunTime Attack: 
 
 ![image](https://user-images.githubusercontent.com/50335583/135883487-e3448c66-8643-4842-a038-b276a0a7b17a.png)
+
+Change Assaults Configuration:
+![image](https://user-images.githubusercontent.com/50335583/135883951-e5309e5b-a211-45dd-bd73-d5c4b7e7589b.png)
