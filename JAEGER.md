@@ -2,4 +2,8 @@ Jaeger trace spring actuator:
 ![image](https://user-images.githubusercontent.com/50335583/135881704-d5e55b12-aee9-4064-a0b6-2f94aa3724e3.png)
 
 
+Jaeger trace method Invocation Spanish Greeting:
+![image](https://user-images.githubusercontent.com/50335583/135882513-4a2e26c2-3be5-47a7-8547-c00aabd6a262.png)
+
+
 
