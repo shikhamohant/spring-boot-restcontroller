@@ -35,4 +35,6 @@ Basic Controller Error After Incoorect resource path was provided:
 After a Latency Attack:
 ![image](https://user-images.githubusercontent.com/50335583/135887780-d3fa5c48-c511-4aad-af5d-c97742dcb9dc.png)
 
+Delayed Succesful Response after latency attack :
+![image](https://user-images.githubusercontent.com/50335583/135888174-af300392-121f-43e8-a089-28b1967c5d2b.png)
 
