@@ -3,6 +3,8 @@ pipeline {
     stages {
         stage('build') {
             steps {
+                sh 'pwd'
+                sh 'ls -ltr'
                 sh 'mvn clean install'
             }
         }
