@@ -5,7 +5,6 @@ pipeline {
             steps {
                 sh 'pwd'
                 sh 'ls -ltr'
-                sh 'mvn clean package'
                 sh 'mvn clean install'
             }
         }
