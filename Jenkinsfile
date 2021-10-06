@@ -24,16 +24,10 @@ pipeline {
                sh './testjar.sh'
                sh  'mvn -X clean compile package'
                nexusArtifactUploader (credentialsId: 'Nexus12', groupId: 'org.sonatype.plugins', nexusUrl: 'http://localhost:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'http://localhost:8081/repository/maven-releases', version: '1.6.6',artifacts: [
-                                // Artifact generated such as .jar, .ear and .war files.
-                                [artifactId: pom.artifactId,
+                                artifactId: pom.artifactId,
                                 classifier: '',
                                 file: artifactPath,
-                                type: pom.packaging],
-                                // Lets upload the pom.xml file for additional information for Transitive dependencies
-                                [artifactId: pom.artifactId,
-                                classifier: '',
-                                file: "pom.xml",
-                                type: "pom"]
+                                type: pom.packaging
                             ])
             }
             
