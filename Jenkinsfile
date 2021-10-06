@@ -15,6 +15,14 @@ pipeline {
                sh './testjar.sh'
                 
             }
+            
+               stage('deployment')
+        {
+            steps { 
+              
+               sh  'mvn clean package deploy'
+                
+            }
         
         }
            
