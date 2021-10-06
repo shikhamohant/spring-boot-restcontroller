@@ -1,6 +1,6 @@
 pipeline {
     agent { any { image 'maven:3.3.3' } }
-     environment {
+    environment {
     NEXUS_CREDS = credentials('Nexus')
     NEXUS_USER = "admin"
     NEXUS_PASSWORD = "admin123"
@@ -19,7 +19,7 @@ pipeline {
                //sh  'ls -ltr'
                sh './testjar.sh'
                sh  'mvn -X clean compile package'
-               sh   'mvn deploy'
+               sh   'mvn -X deploy'
             }
             
         }
