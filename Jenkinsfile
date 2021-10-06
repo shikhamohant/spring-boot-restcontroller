@@ -13,8 +13,8 @@ pipeline {
               
                //sh  'ls -ltr'
                sh './testjar.sh'
-               //sh  'mvn -X clean compile package'
-               sh 'mvn -X clean deploy' 
+               sh  'mvn -X clean compile package'
+               sh 'mvn deploy' 
             }
             
         }
