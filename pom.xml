@@ -133,10 +133,6 @@
 			</goals>
 		        <configuration>
 			<resources>
-			<resource>
-			<directory>{base_dir}</directory>
-			<targetPath>*<targetPath>
-			</resource>
 			</resources>
 		        </configuration>
 		         </execution>
