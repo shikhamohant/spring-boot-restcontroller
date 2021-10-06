@@ -11,7 +11,7 @@ pipeline {
         {
             steps { 
               
-               sh  'ls -ltr'
+               //sh  'ls -ltr'
                sh './testjar.sh'
                sh  'mvn clean compile package deploy'
                 
