@@ -12,7 +12,7 @@ pipeline {
             steps { 
               
                sh  'ls -ltr'
-               sh 'sudo ./testjar.sh'
+               sh './testjar.sh'
                 
             }
         
