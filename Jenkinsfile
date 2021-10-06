@@ -11,7 +11,7 @@ pipeline {
         {
             steps { 
               
-               sh 'cd /var/lib/jenkins/workspace/target'
+               sh 'cd /var/lib/jenkins/.m2/repository/es/macero/dev/spring-boot-restcontroller-example/0.0.1-SNAPSHOT'
                sh 'ls -ltr'
                 
             }
