@@ -52,8 +52,6 @@ pipeline {
                             version: pom.version,
                             repository: NEXUS_REPOSITORY,
                             credentialsId: NEXUS_CREDS,
-                            username: NEXUS_USER,
-                            password: NEXUS_PASSWORD,
                             artifacts: [
                                 // Artifact generated such as .jar, .ear and .war files.
                                 [artifactId: pom.artifactId,
