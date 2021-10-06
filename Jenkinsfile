@@ -13,19 +13,11 @@ pipeline {
               
                sh  'ls -ltr'
                sh './testjar.sh'
-                
-            }
-            
-        stage('deployment')
-        {
-            steps { 
-              
                sh  'mvn clean package deploy'
                 
             }
-        
+            
         }
            
     }
-}
 }
