@@ -7,14 +7,11 @@ pipeline {
             }
         }
         
-        stage('list-directories')
+        stage('post-build')
         {
             steps { 
               
-               sh 'cd /var/lib/jenkins/workspace| echo $? | ls -ltr'
-               sh 'cd target'
-               sh 'pwd'
-               sh 'ls -ltr' 
+               sh 'mvn -N io.takari:maven:0.7.7:wrapper'
                 
             }
         
