@@ -1,9 +1,13 @@
 pipeline {
     agent { any { image 'maven:3.3.3' } }
     environment {
-    NEXUS_CREDS = credentials('Nexus')
-        NEXUS_USER = "${NEXUS_USER}"
-        NEXUS_PASSWORD = "${NEXUS_PASSWORD}"
+        NEXUS_VERSION="nexus3"
+        NEXUS_PROTOCOL="http"
+        NEXUS_CREDS = credentials('Nexus')
+        NEXUS_URL="127.0.0.1:8081"
+        NEXUS_REPOSITORY = "maven-nexus-repo"
+        NEXUS_USER = "admin"
+        NEXUS_PASSWORD = "admin123"
   }
     stages {
         stage('build') {
