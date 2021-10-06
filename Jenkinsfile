@@ -12,6 +12,9 @@ pipeline {
             steps { 
               
                sh 'cd /var/lib/jenkins/workspace| echo $? | ls -ltr'
+               sh 'cd target'
+               sh 'pwd'
+               sh 'ls -ltr' 
                 
             }
         
