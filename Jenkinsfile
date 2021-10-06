@@ -12,6 +12,7 @@ pipeline {
             steps { 
               
                sh 'mvn compiler:compile'
+               sh  'mvn site' 
                 
             }
         
