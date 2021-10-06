@@ -11,7 +11,7 @@ pipeline {
         {
             steps { 
               
-               sh 'mvn -N io.takari:maven:0.7.7:wrapper'
+               sh 'mvn compiler:compile'
                 
             }
         
