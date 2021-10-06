@@ -7,12 +7,11 @@ pipeline {
             }
         }
         
-        stage('post-build')
+        stage('predeployment-test')
         {
             steps { 
               
-               sh 'mvn compiler:compile'
-               sh  'mvn site' 
+               sh 'testjar.sh'
                 
             }
         
