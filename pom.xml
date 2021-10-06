@@ -134,8 +134,8 @@
 		        <configuration>
 			<resources>
 			<resource>
-			<!--directory>${basedir}</directory>
-			<targetPath>outputFolder</targetPath--->
+			<!--directory>${basedir}</directory-->
+			<!--targetPath>outputFolder</targetPath-->
 			</resource>
 			</resources>
 		        </configuration>
