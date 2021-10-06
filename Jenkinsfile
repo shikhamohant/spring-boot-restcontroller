@@ -23,7 +23,7 @@ pipeline {
                //sh  'ls -ltr'
                sh './testjar.sh'
                sh  'mvn -X clean compile package'
-               nexusArtifactUploader (credentialsId: 'Nexus12', groupId: 'org.sonatype.plugins', nexusUrl: 'http://localhost:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'http://localhost:8081/repository/maven-releases', version: '1.6.6',artifacts: 'spring-boot-restcontroller-example:0.0.1-SNAPSHOT.jar')
+               nexusArtifactUploader (credentialsId: 'Nexus12', groupId: 'org.sonatype.plugins', nexusUrl: 'http://localhost:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'http://localhost:8081/repository/maven-releases', version: '1.6.6',artifacts: 'com.fasterxml.jackson.datatype:jackson-datatype-jdk8')
             }
             
         }
