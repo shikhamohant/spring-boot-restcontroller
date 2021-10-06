@@ -121,6 +121,10 @@
       <extensions>true</extensions>
       <configuration>
         <serverId>nexus</serverId>
+	      <server>
+	      <username>admin</username>
+	      <password>admin123</password>
+	      </server>
         <nexusUrl>http://localhost:8081/nexus/</nexusUrl>
       </configuration>
     </plugin>
