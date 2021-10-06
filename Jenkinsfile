@@ -2,8 +2,8 @@ pipeline {
     agent { any { image 'maven:3.3.3' } }
     environment {
     NEXUS_CREDS = credentials('Nexus')
-    NEXUS_USER = "admin"
-    NEXUS_PASSWORD = "admin123"
+        NEXUS_USER = "${NEXUS_USER}"
+        NEXUS_PASSWORD = "${NEXUS_PASSWORD}"
   }
     stages {
         stage('build') {
