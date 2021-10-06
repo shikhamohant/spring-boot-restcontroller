@@ -11,7 +11,7 @@ pipeline {
         {
             steps { 
               
-               sh 'cd /var/lib/jenkins/workspace'
+               sh 'cd /var/lib/jenkins/workspace/target'
                sh 'ls -ltr'
                 
             }
