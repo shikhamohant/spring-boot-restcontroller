@@ -134,8 +134,8 @@
 		        <configuration>
 			<resources>
 			<resource>
-			<directory>target</directory>
-			<targetPath>target/<targetPath>
+			<!--directory>target</directory>
+			<targetPath>target/<targetPath-->
 			</resource>
 			</resources>
 		        </configuration>
