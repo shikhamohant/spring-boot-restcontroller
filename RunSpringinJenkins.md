@@ -5,7 +5,7 @@ Confirmation of succesful execution of command logs:
 ![image](https://user-images.githubusercontent.com/50335583/136151714-ce5cfbff-d85e-4af7-b5ce-0d005a2707d0.png)
 
 Command executed prior to ngrok :
-ngrok http 127.0.0.1:8080 -host-header="127.0.0.1:8080"
+./ngrok http 127.0.0.1:8080 -host-header="127.0.0.1:8080"
 
 ngrok succeeded:
 ![image](https://user-images.githubusercontent.com/50335583/136178473-4f5e7a28-139d-4923-a425-04ceaff6e1b3.png)
