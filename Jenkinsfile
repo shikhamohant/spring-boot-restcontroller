@@ -25,6 +25,7 @@ pipeline {
                sh  'mvn -X clean compile package'
             }
             
+        }
             
              stage("publish to nexus") {
             steps {
