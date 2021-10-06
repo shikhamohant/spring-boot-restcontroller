@@ -14,7 +14,6 @@ pipeline {
                //sh  'ls -ltr'
                sh './testjar.sh'
                sh  'mvn -X clean compile package'
-               sh  'mvn -X deploy'
             }
             
         }
