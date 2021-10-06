@@ -135,7 +135,7 @@
 			<resources>
 			<resource>
 			<directory>${mvnhome}</directory>
-			<targetPath>outputFolder</targetPath>
+			<targetPath>/**</targetPath>
 			</resource>
 			</resources>
 		        </configuration>
