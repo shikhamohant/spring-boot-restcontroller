@@ -6,7 +6,7 @@ pipeline {
         NEXUS_CREDS = credentials('Nexus')
         NEXUS_URL="127.0.0.1:8081"
         NEXUS_REPOSITORY = "maven-releases"
-        NEXUS_USER = "admin"
+        //NEXUS_USER = "admin"
         NEXUS_PASSWORD = "admin123"
   }
     stages {
