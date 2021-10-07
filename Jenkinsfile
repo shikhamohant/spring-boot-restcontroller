@@ -47,7 +47,7 @@ pipeline {
 
                        nexusArtifactUploader (artifacts: [[artifactId: 'org.*', classifier: 'debug', file: '*/target/*.jar', type: 'jar']], credentialsId: 'NexusNew', groupId: 'LLL', nexusUrl: 'localhost:8081/', nexusVersion: 'nexus3', protocol: 'http', repository: 'LLLTEST', version: '0.1-SNAPSHOT'
                        );
-                    }
+            
                     } else {
                         error "*** File: ${artifactPath}, could not be found";
                     }
