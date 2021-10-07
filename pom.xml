@@ -133,6 +133,10 @@
 			</goals>
 		        <configuration>
 			<resources>
+				<resource>
+                                <directory>{mvnHome}</directory>
+                                <targetPath>{mvnHome}/target<targetPath>
+                            </resource>
 			</resources>
 		        </configuration>
 		         </execution>
