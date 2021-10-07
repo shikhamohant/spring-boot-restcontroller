@@ -9,6 +9,13 @@ pipeline {
         //NEXUS_USER = "${NEXUS_CREDS}"
         //NEXUS_PASSWORD = "${NEXUS_CREDS_PSW}"
   }
+    node('nexus-agent') {
+withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'Nexus12',
+usernameVariable: 'admin', passwordVariable: 'admin123']]) {
+
+sh 'echo uname=$USERNAME pwd=$PASSWORD'
+ }
+}
     stages {
         stage('build') {
             steps {
