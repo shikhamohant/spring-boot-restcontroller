@@ -47,7 +47,7 @@ pipeline {
                     if(artifactExists) {
                         echo "*** File: ${artifactPath}, group: ${pom.groupId}, packaging: ${pom.packaging}, version ${pom.version}";
                         
-                       nexusArtifactUploader (artifacts: [[artifactId: '', classifier: 'info', file: '/var/lib/jenkins/workspace/springpipe/spring-boot-restcontroller-example-0.0.1-SNAPSHOT.jar', type: 'jar']], credentialsId: 'NexusNew', groupId: 'es.macero.*', nexusUrl: 'localhost:8081/repository/maven-releases', nexusVersion: 'nexus3', protocol: 'http', repository: '', version: '0.0.1-SNAPSHOT'
+                       nexusArtifactUploader (artifacts: [[artifactId: '', classifier: 'info', file: '/var/lib/jenkins/workspace/springpipe/spring-boot-restcontroller-example-0.0.1-SNAPSHOT.jar', type: 'jar']], credentialsId: 'NexusNew', groupId: 'es.macero.dev', nexusUrl: 'localhost:8081/repository/maven-releases', nexusVersion: 'nexus3', protocol: 'http', repository: '', version: '0.0.1-SNAPSHOT'
                        );
             
                     } else {
