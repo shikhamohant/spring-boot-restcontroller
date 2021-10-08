@@ -6,8 +6,8 @@ pipeline {
         NEXUS_CREDS = credentials('NexusNew')
         NEXUS_URL="127.0.0.1:8081"
         NEXUS_REPOSITORY = "maven-releases"
-        //NEXUS_USER = "${NEXUS_CREDS}"
-        //NEXUS_PASSWORD = "${NEXUS_CREDS_PSW}"
+        NEXUS_USER = "${NEXUS_CREDS_USR}"
+        NEXUS_PASSWORD = "${NEXUS_CREDS_PSW}"
   }
 
     stages {
