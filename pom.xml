@@ -15,6 +15,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.3.12.RELEASE</version>
+		<url>http://localhost:8081/repository/maven-releases</url>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
