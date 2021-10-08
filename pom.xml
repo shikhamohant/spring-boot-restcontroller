@@ -136,8 +136,10 @@
 			<resource>
                         <directory>{mvnHome}</directory>
                         <targetPath>{mvnHome}/target</targetPath>
-		           <id>maven.oracle.com</id>
-                            <url>https://maven.oracle.com</url>
+		           <id>nexus</id>
+                            <url>http://localhost:8081/repository/maven-releases</url>
+			    <username>admin</username>
+			   <password>admin123</password>
                         </resource>
 			</resources>
 		        </configuration>
