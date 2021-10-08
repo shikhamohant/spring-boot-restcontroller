@@ -3,7 +3,7 @@ pipeline {
     environment {
         NEXUS_VERSION="nexus3"
         NEXUS_PROTOCOL="http"
-        NEXUS_CREDS = credentials('NexusNew')
+        NEXUS_CREDS = credentials('springpipe')
         NEXUS_URL="127.0.0.1:8081"
         NEXUS_REPOSITORY = "maven-releases"
         //NEXUS_USER = "${NEXUS_CREDS_USR}"
@@ -47,7 +47,7 @@ pipeline {
                     if(artifactExists) {
                         echo "*** File: ${artifactPath}, group: ${pom.groupId}, packaging: ${pom.packaging}, version ${pom.version}";
                         
-                        nexusArtifactUploader (artifacts: [[artifactId: 'spring-boot-restcontroller-example', classifier:'', file: '/var/lib/jenkins/workspace/springpipe/spring-boot-restcontroller-example-0.0.1-SNAPSHOT.jar', type: 'jar']],credentialsId('Nexus'), groupId: 'es.macero.dev', nexusUrl: 'localhost:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'deployments', version: '0.0.1-SNAPSHOT'
+                        nexusArtifactUploader (artifacts: [[artifactId: 'spring-boot-restcontroller-example', classifier:'', file: '/var/lib/jenkins/workspace/springpipe/spring-boot-restcontroller-example-0.0.1-SNAPSHOT.jar', type: 'jar']],credentialsId: 'NexusNew', groupId: 'es.macero.dev', nexusUrl: 'localhost:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'deployments', version: '0.0.1-SNAPSHOT'
                        );
             
                     } else {
