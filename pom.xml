@@ -136,6 +136,8 @@
 			<resource>
                         <directory>{mvnHome}</directory>
                         <targetPath>{mvnHome}/target</targetPath>
+		           <id>maven.oracle.com</id>
+                            <url>https://maven.oracle.com</url>
                         </resource>
 			</resources>
 		        </configuration>
