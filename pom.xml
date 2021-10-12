@@ -136,7 +136,7 @@
 			<resource>
                         <directory>{mvnHome}</directory>
                         <targetPath>{mvnHome}/target</targetPath>
-                            <url>http://localhost:8081/repository/maven-releases/</url>
+                            <url>http://localhost:8081/#browse/browse:maven-releases/</url>
 			    <username>admin</username>
 			   <password>nexus123</password>
                         </resource>
@@ -157,12 +157,12 @@
 		<repository>
 			<id>deployment</id>	
 			<name>Internal Releases</name>
-			<url>http://localhost:8081/repository/maven-releases/</url>
+			<url>http://localhost:8081/#browse/browse:maven-releases/</url>
 		</repository>
 		<snapshotRepository>
 			<id>deployment</id>
 			<name>Internal Snapshot Releases</name>
-			<url>http://localhost:8081/repository/maven-releases/</url>
+			<url>http://localhost:8081/#browse/browse:maven-releases/</url>
 	    </snapshotRepository>
 	</distributionManagement>
 </project>
