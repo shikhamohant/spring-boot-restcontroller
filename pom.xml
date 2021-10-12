@@ -136,9 +136,9 @@
 			<resource>
                         <directory>{mvnHome}</directory>
                         <targetPath>{mvnHome}/target</targetPath>
-                            <!--url>http://localhost:8081/repository/maven-public</url-->
-			    <!--username>admin</username>
-			   <password>nexus123</password-->
+                            <url>http://localhost:8081/repository/maven-releases/</url>
+			    <username>admin</username>
+			   <password>nexus123</password>
                         </resource>
 			</resources>
 		        </configuration>
