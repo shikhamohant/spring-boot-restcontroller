@@ -137,8 +137,8 @@
                         <directory>{mvnHome}</directory>
                         <targetPath>{mvnHome}/target</targetPath>
                             <url>http://localhost:8081/repository/maven-public</url>
-			    <username>admin</username>
-			   <password>admin123</password>
+			    <!--username>admin</username>
+			   <password>admin123</password-->
                         </resource>
 			</resources>
 		        </configuration>
@@ -150,14 +150,6 @@
       <artifactId>nexus-staging-maven-plugin</artifactId>
       <version>1.6.6</version>
       <extensions>true</extensions>
-      <configuration>
-        <serverId>nexus</serverId>
-	      <server>
-	      <username>admin</username>
-	      <password>admin123</password>
-	      </server>
-        <nexusUrl>http://localhost:8081</nexusUrl>
-      </configuration>
     </plugin>
 		</plugins>
 	</build>
