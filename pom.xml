@@ -136,9 +136,9 @@
 			<resource>
                         <directory>{mvnHome}</directory>
                         <targetPath>{mvnHome}/target</targetPath>
-                            <url>http://localhost:8081/#browse/browse:maven-releases/</url>
+                            <!--url>http://localhost:8081/#browse/browse:maven-releases/</url>
 			    <username>admin</username>
-			   <password>nexus123</password>
+			   <password>nexus123</password-->
                         </resource>
 			</resources>
 		        </configuration>
