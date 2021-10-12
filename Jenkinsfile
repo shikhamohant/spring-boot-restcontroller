@@ -30,7 +30,7 @@ pipeline {
             
              stage("publish to nexus") {
             steps {
-                sh 'curl http://localhost:8081/repository/maven-releases'
+                sh 'curl http://localhost:8081/repository/maven-releases/'
                 script {
                     // Read POM xml file using 'readMavenPom' step , this step 'readMavenPom' is included in: https://plugins.jenkins.io/pipeline-utility-steps
                     pom = readMavenPom file: "pom.xml";
