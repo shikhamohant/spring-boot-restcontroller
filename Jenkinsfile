@@ -4,7 +4,7 @@ pipeline {
         NEXUS_VERSION="nexus3"
         NEXUS_PROTOCOL="http"
         NEXUS_CREDS = credentials('NexusNew')
-        NEXUS_URL="127.0.0.1:8081"
+        NEXUS_URL="localhost:8081"
         NEXUS_REPOSITORY = "maven-releases"
         //NEXUS_USER = "${NEXUS_CREDS_USR}"
         //NEXUS_PASSWORD = "${NEXUS_CREDS_PSW}"
@@ -42,7 +42,7 @@ pipeline {
                     artifactPath = filesByGlob[0].path;
                     // Assign to a boolean response verifying If the artifact name exists
                     artifactExists = fileExists artifactPath;
-                    mvnHome='/var/lib/jenkins/workspace/springpipe';
+                    mvnHome='/usr/share/maven/';
 
                     if(artifactExists) {
                         echo "*** File: ${artifactPath}, group: ${pom.groupId}, packaging: ${pom.packaging}, version ${pom.version}";
