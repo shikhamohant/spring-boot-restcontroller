@@ -1,6 +1,6 @@
 pipeline {
     agent { any { image 'maven:3.3.3' } }
-    environment {
+   /* environment {
         NEXUS_VERSION="nexus3"
         NEXUS_PROTOCOL="http"
         NEXUS_CREDS = credentials('Nexus')
@@ -8,7 +8,7 @@ pipeline {
         NEXUS_REPOSITORY = "maven-snapshots"
         //NEXUS_USER = "${NEXUS_CREDS_USR}"
         //NEXUS_PASSWORD = "${NEXUS_CREDS_PSW}"
-  }
+  }*/
 
     stages {
         stage('build') {
