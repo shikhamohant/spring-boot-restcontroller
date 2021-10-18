@@ -1,14 +1,8 @@
 pipeline {
-    agent { any { image 'maven:3.3.3' } }
-   /* environment {
-        NEXUS_VERSION="nexus3"
-        NEXUS_PROTOCOL="http"
-        NEXUS_CREDS = credentials('Nexus')
-        NEXUS_URL="127.0.0.1:8081"
-        NEXUS_REPOSITORY = "maven-snapshots"
-        //NEXUS_USER = "${NEXUS_CREDS_USR}"
-        //NEXUS_PASSWORD = "${NEXUS_CREDS_PSW}"
-  }*/
+    agent any
+        	tools {
+        	maven "maven"
+    	}
 
     stages {
         stage('build') {
@@ -30,10 +24,9 @@ pipeline {
             
              stage("publish to nexus") {
             steps {
-                sh 'curl http://localhost:8081/repository/maven-releases/'
-                //nexusArtifactUploader artifacts: [[artifactId: 'spring-boot-restcontroller-example', classifier:'debug', file: '/var/lib/jenkins/workspace/springpipe/target/spring-boot-restcontroller-example-0.0.1-SNAPSHOT.jar', type: 'jar']],credentialsId: 'Nexus', groupId: 'es.macero.dev', nexusUrl: '127.0.0.1:8081/', nexusVersion: 'nexus3', protocol: 'http', repository: 'maven-releases', version: '0.0.1-SNAPSHOT'
-                nexusArtifactUploader artifacts: [[artifactId: 'spring-boot-restcontroller-example', classifier:'debug', file: '/var/lib/jenkins/workspace/springpipe/target/spring-boot-restcontroller-example-0.0.1-SNAPSHOT.jar', type: 'jar']],credentialsId: 'Nexus', groupId: 'es.macero.dev', nexusUrl: '127.0.0.1:8081/', nexusVersion: 'nexus3', protocol: 'http', repository: 'maven-snapshots', version: '0.0.1-SNAPSHOT'
-                nexusArtifactUploader artifacts: [[artifactId: 'spring-boot-restcontroller-example', classifier:'debug', file: '/var/lib/jenkins/workspace/springpipe/target/spring-boot-restcontroller-example-0.0.1-SNAPSHOT.jar', type: 'jar']],credentialsId: 'Nexus', groupId: 'es.macero.dev', nexusUrl: '127.0.0.1:8081/', nexusVersion: 'nexus3', protocol: 'http', repository: 'maven-releases', version: '3.3.3'     
+                sh 'curl http://192.168.221.128:8091/repository/maven-releases/'
+                nexusArtifactUploader artifacts: [[artifactId: 'spring-boot-restcontroller-example', classifier:'debug', file: '/var/lib/jenkins/workspace/restcontroltest_master/target/spring-boot-restcontroller-example-0.0.1-SNAPSHOT.jar', type: 'jar']],credentialsId: 'ba1a5ce3-b8ed-43ed-8ed3-b387ee6cffa3', groupId: 'es.macero.dev', nexusUrl: '192.168.221.128:8091', nexusVersion: 'nexus3', protocol: 'http', repository: 'maven-snapshots', version: '0.0.1-SNAPSHOT'
+                nexusArtifactUploader artifacts: [[artifactId: 'spring-boot-restcontroller-example', classifier:'debug', file: '/var/lib/jenkins/workspace/restcontroltest_master/target/spring-boot-restcontroller-example-0.0.1-SNAPSHOT.jar', type: 'jar']],credentialsId: 'ba1a5ce3-b8ed-43ed-8ed3-b387ee6cffa3', groupId: 'es.macero.dev', nexusUrl: '192.168.221.128:8091', nexusVersion: 'nexus3', protocol: 'http', repository: 'maven-releases', version: '2.3.12.RELEASE'     
                 }
             }
         
