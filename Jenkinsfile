@@ -4,7 +4,7 @@ pipeline {
         NEXUS_VERSION="nexus3"
         NEXUS_PROTOCOL="http"
         NEXUS_CREDS = credentials('NexusNew')
-        NEXUS_URL="192.168.163.132:8081"
+        NEXUS_URL="127.0.0.1:8081"
         NEXUS_REPOSITORY = "maven-releases"
         //NEXUS_USER = "${NEXUS_CREDS_USR}"
         //NEXUS_PASSWORD = "${NEXUS_CREDS_PSW}"
@@ -31,6 +31,8 @@ pipeline {
              stage("publish to nexus") {
             steps {
                 sh 'curl http://localhost:8081/repository/maven-releases/'
+                nexusArtifactUploader artifacts: [[artifactId: 'spring-boot-restcontroller-example', classifier:'debug', file: '/var/lib/jenkins/workspace/springpipe/target/spring-boot-restcontroller-example-0.0.1-SNAPSHOT.jar', type: 'jar']],credentialsId: '8245f30a-a015-47fb-99ae-da2c15a37d01', groupId: 'es.macero.dev', nexusUrl: '192.168.163.132:8081/repository/maven-releases', nexusVersion: 'nexus3', protocol: 'http', repository: 'deployments', version: '0.0.1-SNAPSHOT'
+                       
                 script {
                     // Read POM xml file using 'readMavenPom' step , this step 'readMavenPom' is included in: https://plugins.jenkins.io/pipeline-utility-steps
                     pom = readMavenPom file: "pom.xml";
@@ -47,8 +49,7 @@ pipeline {
                     if(artifactExists) {
                         echo "*** File: ${artifactPath}, group: ${pom.groupId}, packaging: ${pom.packaging}, version ${pom.version}";
                         
-                        nexusArtifactUploader (artifacts: [[artifactId: 'spring-boot-restcontroller-example', classifier:'debug', file: '/var/lib/jenkins/workspace/springpipe/target/spring-boot-restcontroller-example-0.0.1-SNAPSHOT.jar', type: 'jar']],credentialsId: '8245f30a-a015-47fb-99ae-da2c15a37d01', groupId: 'es.macero.dev', nexusUrl: '192.168.163.132:8081/repository/maven-snapshots', nexusVersion: 'nexus3', protocol: 'http', repository: 'deployments', version: '0.0.1-SNAPSHOT'
-                       );
+                     
             
                     } else {
                         error "*** File: ${artifactPath}, could not be found";
