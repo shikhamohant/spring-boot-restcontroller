@@ -4,7 +4,7 @@ pipeline {
         NEXUS_VERSION="nexus3"
         NEXUS_PROTOCOL="http"
         NEXUS_CREDS = credentials('NexusNew')
-        NEXUS_URL="localhost:8081"
+        NEXUS_URL="192.168.163.132:8081"
         NEXUS_REPOSITORY = "maven-releases"
         //NEXUS_USER = "${NEXUS_CREDS_USR}"
         //NEXUS_PASSWORD = "${NEXUS_CREDS_PSW}"
