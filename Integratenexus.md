@@ -5,6 +5,12 @@ Snippet of Artifacts deployed into Nexus :
 
 Uploaded Jar into Nexus From Windows WSL Jenkins Required update of Credentials file and commeting out NExus Env variables from Jenkins file:
 
+Maven Snapshot file:
+![image](https://user-images.githubusercontent.com/50335583/137686583-2a6bc38b-8c42-4d28-924e-58308fbb128b.png)
+
+
+
+Release file: 
 ![image](https://user-images.githubusercontent.com/50335583/137686484-2bfb50dc-f270-4976-881d-a8394f2610f5.png)
 
 
