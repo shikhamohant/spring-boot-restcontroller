@@ -109,16 +109,16 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<!--version>2.3.6.RELEASE</version-->
 				<!--configuration>
-			        <fork>true</fork>
+			        <!--fork>true</fork>
 				<mainClass>SpringBootRestcontrollerExampleApplication</mainClass>
-				</configuration-->
+				</configuration>
 	                        <executions>
 		                 <execution>
 				<goals>
 				<goal>repackage</goal>
 				</goals>
 				</execution>
-				</executions>
+				</executions-->
 			</plugin>
 			 <plugin>
 			<groupId>org.codehaus.mojo</groupId>
