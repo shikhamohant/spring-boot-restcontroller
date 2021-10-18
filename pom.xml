@@ -120,28 +120,28 @@
 				</execution>
 				</executions>
 			</plugin>
-				 <plugin>
-					   <groupId>org.codehaus.mojo</groupId>
-						     <artifactId>build-helper-maven-plugin</artifactId>
-							       <version>1.9.1</version>
-								         <executions>
-										    <execution>
-											        <id>my-own-very-cool-id-for-this-step</id>
-													     <phase>generate-resources</phase>
-														           <goals>
-																          <goal>add-resource</goal>
-																		         </goals>
-																				         <configuration>
-																						          <resources>
-																								           <resource>
-																										             <directory>${basedir}</directory>
-																												                <targetPath>outputFolder</targetPath>
-																															           </resource>
-																																	              </resources>
-																																			                 </configuration>
-																																						            </execution>
-																																								                </executions>
-																																											        </plugin>
+			 <plugin>
+			<groupId>org.codehaus.mojo</groupId>
+			 <artifactId>build-helper-maven-plugin</artifactId>
+		         <version>1.9.1</version> 
+			<executions>
+			<execution>
+			<id>upload-to-nexus</id>
+		        <phase>generate-resources</phase>
+		        <goals>
+			<goal>add-resource</goal>
+			</goals>
+		        <configuration>
+			<resources>
+			<resource>
+                        <directory>{mvnHome}</directory>
+                        <targetPath>{mvnHome}/target</targetPath>
+                        </resource>
+			</resources>
+		        </configuration>
+		         </execution>
+			</executions>
+			</plugin>
 			<plugin>
       <groupId>org.sonatype.plugins</groupId>
       <artifactId>nexus-staging-maven-plugin</artifactId>

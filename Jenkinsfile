@@ -3,12 +3,13 @@ pipeline {
     environment {
         NEXUS_VERSION="nexus3"
         NEXUS_PROTOCOL="http"
-        NEXUS_CREDS = credentials('Nexus')
+        NEXUS_CREDS = credentials('NexusNew')
         NEXUS_URL="127.0.0.1:8081"
         NEXUS_REPOSITORY = "maven-releases"
-        NEXUS_USER = "admin"
-        NEXUS_PASSWORD = "admin123"
+        //NEXUS_USER = "${NEXUS_CREDS}"
+        //NEXUS_PASSWORD = "${NEXUS_CREDS_PSW}"
   }
+
     stages {
         stage('build') {
             steps {
@@ -22,13 +23,14 @@ pipeline {
               
                //sh  'ls -ltr'
                sh './testjar.sh'
-               sh  'mvn -X clean compile package'
+               sh  'mvn  clean compile package'
             }
             
         }
             
              stage("publish to nexus") {
             steps {
+                sh 'curl http://localhost:8081/repository/maven-releases'
                 script {
                     // Read POM xml file using 'readMavenPom' step , this step 'readMavenPom' is included in: https://plugins.jenkins.io/pipeline-utility-steps
                     pom = readMavenPom file: "pom.xml";
@@ -40,33 +42,14 @@ pipeline {
                     artifactPath = filesByGlob[0].path;
                     // Assign to a boolean response verifying If the artifact name exists
                     artifactExists = fileExists artifactPath;
+                    mvnHome='/var/lib/jenkins/workspace/springpipe';
 
                     if(artifactExists) {
                         echo "*** File: ${artifactPath}, group: ${pom.groupId}, packaging: ${pom.packaging}, version ${pom.version}";
-
-                        nexusArtifactUploader(
-                            nexusVersion: NEXUS_VERSION,
-                            protocol: NEXUS_PROTOCOL,
-                            nexusUrl: NEXUS_URL,
-                            groupId: pom.groupId,
-                            version: pom.version,
-                            repository: NEXUS_REPOSITORY,
-                            credentialsId: NEXUS_CREDS,
-                            artifacts: [
-                                // Artifact generated such as .jar, .ear and .war files.
-                                [artifactId: pom.artifactId,
-                                classifier: '',
-                                file: artifactPath,
-                                type: pom.packaging],
-
-                                // Lets upload the pom.xml file for additional information for Transitive dependencies
-                                [artifactId: pom.artifactId,
-                                classifier: '',
-                                file: "pom.xml",
-                                type: "pom"]
-                            ]
-                        );
-
+                        
+                       nexusArtifactUploader (artifacts: [[artifactId: '', classifier: 'info', file: '/var/lib/jenkins/workspace/springpipe/spring-boot-restcontroller-example-0.0.1-SNAPSHOT.jar', type: 'jar']], credentialsId: 'NexusNew', groupId: 'es.macero.dev', nexusUrl: 'localhost:8081/repository/maven-releases', nexusVersion: 'nexus3', protocol: 'http', repository: '', version: '0.0.1-SNAPSHOT'
+                       );
+            
                     } else {
                         error "*** File: ${artifactPath}, could not be found";
                     }
