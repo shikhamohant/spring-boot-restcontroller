@@ -5,7 +5,7 @@ pipeline {
         NEXUS_PROTOCOL="http"
         NEXUS_CREDS = credentials('Nexus')
         NEXUS_URL="127.0.0.1:8081"
-        NEXUS_REPOSITORY = "maven-releases"
+        NEXUS_REPOSITORY = "maven-snapshots"
         //NEXUS_USER = "${NEXUS_CREDS_USR}"
         //NEXUS_PASSWORD = "${NEXUS_CREDS_PSW}"
   }
@@ -32,7 +32,7 @@ pipeline {
             steps {
                 sh 'curl http://localhost:8081/repository/maven-releases/'
                 //nexusArtifactUploader artifacts: [[artifactId: 'spring-boot-restcontroller-example', classifier:'debug', file: '/var/lib/jenkins/workspace/springpipe/target/spring-boot-restcontroller-example-0.0.1-SNAPSHOT.jar', type: 'jar']],credentialsId: '', groupId: 'es.macero.dev', nexusUrl: '127.0.0.1:8081/', nexusVersion: 'nexus3', protocol: 'http', repository: 'maven-releases', version: '0.0.1-SNAPSHOT'
-                nexusArtifactUploader artifacts: [[artifactId: 'spring-boot-restcontroller-example', classifier:'debug', file: '/var/lib/jenkins/workspace/springpipe/target/spring-boot-restcontroller-example-0.0.1-SNAPSHOT.jar', type: 'jar']],credentialsId: '', groupId: 'es.macero.dev', nexusUrl: '127.0.0.1:8081/', nexusVersion: 'nexus3', protocol: 'http', repository: 'maven-releases', version: '0.0.1-SNAPSHOT'
+                nexusArtifactUploader artifacts: [[artifactId: 'spring-boot-restcontroller-example', classifier:'debug', file: '/var/lib/jenkins/workspace/springpipe/target/spring-boot-restcontroller-example-0.0.1-SNAPSHOT.jar', type: 'jar']],credentialsId: '', groupId: 'es.macero.dev', nexusUrl: '127.0.0.1:8081/', nexusVersion: 'nexus3', protocol: 'http', repository: 'maven-snapshots', version: '0.0.1-SNAPSHOT'
                        
                 script {
                     // Read POM xml file using 'readMavenPom' step , this step 'readMavenPom' is included in: https://plugins.jenkins.io/pipeline-utility-steps
