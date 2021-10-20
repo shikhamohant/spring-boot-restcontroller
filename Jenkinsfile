@@ -1,3 +1,4 @@
+properties([parameters([choice(choices: 'master\nraveendra\nshikha\nsubbulaxmi\nkuashik\nbargavarm\nasim', description: 'Select the branch', name: 'Branch')])])
 pipeline {
     agent any
         	tools {
